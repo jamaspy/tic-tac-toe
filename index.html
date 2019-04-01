@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <title>Project 0 _ TicTacToe</title>
+</head>
+
+<body>
+  <h1 class="text-center mt-3">Tic Tac Toe</h1>
+
+
+  <div class="container">
+
+    <!-- ROW 1 -->
+    <div class="row mt-5 d-flex justify-content-center align-items-center" id="row-1">
+
+      <div class="col-md-2 sideBar" id="row-1-sideBar">
+        <span id="displayerWinner">
+          <h2>Player One Is The Winner!</h2>
+        </span>
+      </div>
+
+      <div class="col-md-1"></div>
+
+      <div class="col-md-3 square" data-squareid="row-1-square1" data-squarevalue = "1" id="row-1-square1"></div>
+      <div class="col-md-3 square" data-squareid="row-1-square2" data-squarevalue = "2"id="row-1-square2"></div>
+      <div class="col-md-3 square" data-squareid="row-1-square3" data-squarevalue = "3" id="row-1-square3"></div>
+
+    </div>
+
+    <!-- ROW 2 -->
+    <div class="row d-flex justify-content-center" id="row-2">
+
+      <div class="col-md-2 sideBar" id="row-2-sideBar">
+        <p class="lead">Player One: <span id="player1_icon"> </span></p>
+        <p class="small">Pick Your Icon</p>
+        <button class="btn btn-outline-dark" id="player1-naught">O</button>
+        <button class="btn btn-outline-dark" id="player1-cross">X</button>
+      </div>
+
+      <div class="col-md-1"></div>
+
+      <div class="col-md-3 square" data-squareid="row-2-square1" data-squarevalue = "4" id="row-2-square1"></div>
+      <div class="col-md-3 square" data-squareid="row-2-square2" data-squarevalue = "5" id="row-2-square2"></div>
+      <div class="col-md-3 square" data-squareid="row-2-square3" data-squarevalue = "6" id="row-2-square3"></div>
+    </div>
+
+    <!-- ROW 3 -->
+
+    <div class="row d-flex justify-content-center id = " row-3">
+
+      <div class="col-md-2 sideBar" id="row-3-sideBar">
+        <p class="lead">Player Two: <span id="player2_icon"> </span></p>
+        <p class="small">Pick Your Icon</p>
+        <button class="btn btn-outline-dark" id="player2-naught">O</button>
+        <button class="btn btn-outline-dark" id="player2-cross">X</button>
+      </div>
+
+      <div class="col-md-1"></div>
+
+      <div class="col-md-3 square" data-squareid="row-3-square1" data-squarevalue = "7" id="row-3-square1"></div>
+      <div class="col-md-3 square" data-squareid="row-3-square2" data-squarevalue = "8" id="row-3-square2"></div>
+      <div class="col-md-3 square" data-squareid="row-3-square3" data-squarevalue = "9" id="row-3-square3"></div>
+
+    </div>
+
+  </div>
+
+  <!-- Optional JavaScript -->
+  <script src="js/jquery.js" type="text/javascript"></script>
+  <script src="js/game-jQuery.js" type="text/javascript"></script>
+  <script src="js/game-logic.js" type="text/javascript"></script>
+
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
