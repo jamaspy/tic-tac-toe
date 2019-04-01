@@ -3,14 +3,17 @@ console.log("game-logic.js LOADED");
 const winningCombos = ["123", "456", "789", "147", "258", "369", "159", "357"]
 
 const theGame = {
-  player1: null,
-  player2: null,
+  player1: undefined,
+  player2: undefined,
 
   player1Moves: [],
   player2Moves: [],
 }
 
-
+const sortPlayer1Moves = (arr) => {
+  arr.sort();
+  console.log(arr);
+}
 
 
 // THOUGHTS & NOTES
@@ -25,4 +28,4 @@ const theGame = {
 // p2moves: []
 // winningCombos = "123" "456" "789" "147" "258" "369" "159" "357"
 // make game setup function
-// Find away to keep track of whos go it is 
+// Find away to keep track of whos go it is
