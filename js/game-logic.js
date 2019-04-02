@@ -1,19 +1,74 @@
 console.log("game-logic.js LOADED");
 
-const winningCombos = ["123", "456", "789", "147", "258", "369", "159", "357"]
+const gameSetup = () => {
+
+};
+
 
 const theGame = {
-  player1: undefined,
-  player2: undefined,
-
+  player1: {
+    icon: undefined,
+    currentlyPlaying: true
+  },
+  player2: {
+    icon: undefined,
+    currentlyPlaying: false
+  },
   player1Moves: [],
   player2Moves: [],
+  winningCombos: ["123", "456", "789", "147", "258", "369", "159", "357"],
+};
+
+const checkWinner = (arr) => {
+  toWinningString = arr.sort().join().replace(/,/g, "");
+  for (let i = 0; i < theGame.winningCombos.length; i++) {
+    const candidate = theGame.winningCombos[i];
+    let matches = 0;
+    for (let j = 0; j < candidate.length; j++) {
+      if (toWinningString.includes(candidate[j])) {
+        matches++;
+      }
+    }
+    if (matches === 3) {
+      if (theIcon == theGame.player1.icon) {
+        $("#winnerIcon").html("Player 1");
+      } else {
+        $("#winnerIcon").html("Player 2");
+      };
+      $('#myModal').modal('show')
+      console.log("WINNER");
+      break;
+    }
+  }
+
 }
 
-const sortPlayer1Moves = (arr) => {
-  arr.sort();
-  console.log(arr);
-}
+const switchPlayer = () => {
+  if (theGame.player1.currentlyPlaying == true) {
+    theIcon = theGame.player1.icon;
+    theArray = theGame.player1Moves;
+    theGame.player1.currentlyPlaying = false;
+  } else {
+    theIcon = theGame.player2.icon;
+    theArray = theGame.player2Moves;
+    theGame.player1.currentlyPlaying = true;
+  }
+  return (theIcon);
+};
+
+const resetGame = () => {
+
+};
+
+
+
+gameSetup();
+
+
+
+
+
+
 
 
 // THOUGHTS & NOTES

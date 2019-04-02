@@ -11,7 +11,6 @@ body{
   background-repeat: no-repeat;
   color: black;
   text-shadow: 1px 1px 1px white;
-
 }
 
 h1{
@@ -125,4 +124,21 @@ h1{
 
 .btn-outline-dark{
   margin-left: 17px;
+
+}
+
+.hover{
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.modal{
+  text-align: center;
+  background-image: url("https://media.giphy.com/media/1vRlMcPvrYMY8/giphy.gif");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.modal-content{
+  background-color: rgba(255, 255, 255, 0.5);
 }
