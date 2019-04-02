@@ -3,7 +3,7 @@ $(document).ready(function() {
 
   //Set Player 1 Icon
   $("#player1-naught").on("click", function() {
-    theGame.player1.icon = "0";
+    theGame.player1.icon = "O";
     theGame.player2.icon = "X";
     $("#player1_icon").html(theGame.player1.icon);
     $("#player2_icon").html(theGame.player2.icon);
@@ -18,7 +18,7 @@ $(document).ready(function() {
 
   //Set Player 2 Icon
   $("#player2-naught").on("click", function() {
-    theGame.player2.icon = "0";
+    theGame.player2.icon = "O";
     theGame.player1.icon = "X";
     $("#player2_icon").html(theGame.player2.icon);
     $("#player1_icon").html(theGame.player1.icon);

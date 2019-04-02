@@ -17,30 +17,28 @@
 </head>
 
 <body>
-  <h1 class="text-center mt-3">Tic Tac Toe</h1>
+  <h1 class="text-left mt-2 ml-5">May The TicTacToe Be With You.</h1>
 
 
-  <div class="container">
+  <div class="container-fluid">
 
     <!-- ROW 1 -->
-    <div class="row mt-5 d-flex justify-content-center align-items-center" id="row-1">
+    <div class="row mt-2" id="row-1">
 
       <div class="col-md-2 sideBar" style = "visibility: hidden"id="row-1-sideBar">
         <span id="displayerWinner">
-          <h2>Player One Is The Winner!</h2>
+            <button class="btn btn-outline-dark" id="player2-cross">Draw. Restart.</button>
         </span>
       </div>
 
-      <div class="col-md-1"></div>
-
-      <div class="col-md-3 square" data-squareid="row-1-square1" data-squarevalue = "1" id="row-1-square1"></div>
-      <div class="col-md-3 square" data-squareid="row-1-square2" data-squarevalue = "2"id="row-1-square2"></div>
-      <div class="col-md-3 square" data-squareid="row-1-square3" data-squarevalue = "3" id="row-1-square3"></div>
-
+      <div class="col-md-2 square" data-squareid="row-1-square1" data-squarevalue = "1" id="row-1-square1"></div>
+      <div class="col-md-2 square" data-squareid="row-1-square2" data-squarevalue = "2"id="row-1-square2"></div>
+      <div class="col-md-2 square" data-squareid="row-1-square3" data-squarevalue = "3" id="row-1-square3"></div>
+      <div class="col-md-4"></div>
     </div>
 
     <!-- ROW 2 -->
-    <div class="row d-flex justify-content-center" id="row-2">
+    <div class="row" id="row-2">
 
       <div class="col-md-2 sideBar" id="row-2-sideBar">
         <p class="lead">Player One: <span id="player1_icon"> </span></p>
@@ -49,16 +47,17 @@
         <button class="btn btn-outline-dark" id="player1-cross">X</button>
       </div>
 
-      <div class="col-md-1"></div>
 
-      <div class="col-md-3 square" data-squareid="row-2-square1" data-squarevalue = "4" id="row-2-square1"></div>
-      <div class="col-md-3 square" data-squareid="row-2-square2" data-squarevalue = "5" id="row-2-square2"></div>
-      <div class="col-md-3 square" data-squareid="row-2-square3" data-squarevalue = "6" id="row-2-square3"></div>
+
+      <div class="col-md-2 square" data-squareid="row-2-square1" data-squarevalue = "4" id="row-2-square1"></div>
+      <div class="col-md-2 square" data-squareid="row-2-square2" data-squarevalue = "5" id="row-2-square2"></div>
+      <div class="col-md-2 square" data-squareid="row-2-square3" data-squarevalue = "6" id="row-2-square3"></div>
+            <div class="col-md-4"></div>
     </div>
 
     <!-- ROW 3 -->
 
-    <div class="row d-flex justify-content-center id = " row-3">
+    <div class="row" id = "row-3">
 
       <div class="col-md-2 sideBar" id="row-3-sideBar">
         <p class="lead">Player Two: <span id="player2_icon"> </span></p>
@@ -67,30 +66,30 @@
         <button class="btn btn-outline-dark" id="player2-cross">X</button>
       </div>
 
-      <div class="col-md-1"></div>
 
-      <div class="col-md-3 square" data-squareid="row-3-square1" data-squarevalue = "7" id="row-3-square1"></div>
-      <div class="col-md-3 square" data-squareid="row-3-square2" data-squarevalue = "8" id="row-3-square2"></div>
-      <div class="col-md-3 square" data-squareid="row-3-square3" data-squarevalue = "9" id="row-3-square3"></div>
 
+      <div class="col-md-2 square" data-squareid="row-3-square1" data-squarevalue = "7" id="row-3-square1"></div>
+      <div class="col-md-2 square" data-squareid="row-3-square2" data-squarevalue = "8" id="row-3-square2"></div>
+      <div class="col-md-2 square" data-squareid="row-3-square3" data-squarevalue = "9" id="row-3-square3"></div>
+      <div class="col-md-4"></div>
     </div>
 
   </div>
 
   <div id = "myModal" class="modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h2 class="modal-title">We Have A Winner!</h2>
+      <div class="modal-header text-center">
+        <h2 class="modal-title "></h2>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+          <span aria-hidden="true"><i class="fas fa-jedi"></i></span>
         </button>
       </div>
       <div class="modal-body">
-        <h2><span id = "winnerIcon"></span>'s Is The Winner'</h2>
+        <h2><span id = "winnerIcon"></span> Is The Winner!</h2>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Play Again</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="resetGame();">Play Again</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>

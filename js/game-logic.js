@@ -1,7 +1,7 @@
 console.log("game-logic.js LOADED");
 
-const gameSetup = () => {
-
+const resetGame = () => {
+location.reload();
 };
 
 
@@ -55,15 +55,6 @@ const switchPlayer = () => {
   }
   return (theIcon);
 };
-
-const resetGame = () => {
-
-};
-
-
-
-gameSetup();
-
 
 
 
