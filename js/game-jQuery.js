@@ -33,14 +33,13 @@ $(document).ready(function() {
 
   //Click square function
   $(".square").on("click", function() {
-    switchPlayer();
+    theGame.switchPlayer();
     let squareId = $(this).attr("data-squareid");
     $(this).html(theIcon);
     let squareValue = $(this).attr("data-squarevalue")
     theArray.push(squareValue)
-    checkWinner(theArray);
+    theGame.checkWinner(theArray);
   });
-
 
   //Change Sqaure color on hover
   $(".square").hover(function() {
@@ -48,10 +47,5 @@ $(document).ready(function() {
   }, function() {
     $(this).removeClass('hover');
   });
-
-
-
-
-
 
 });
