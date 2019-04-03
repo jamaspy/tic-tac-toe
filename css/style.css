@@ -1,3 +1,4 @@
+
 /* GoogleFonts */
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
 
@@ -17,7 +18,7 @@ h1{
   font-size: 6em;
   margin-top: 15px;
 }
-
+/* END OF HTML SELECTORS */
 
 
 /* IDs Go In Here */
@@ -102,6 +103,9 @@ h1{
   text-align: center;
 }
 
+/* END OF ID's */
+
+
 /* Classes Go In Here */
 
 .sideBar .lead{
@@ -143,3 +147,5 @@ h1{
 .modal-content{
   background-color: rgba(255, 255, 255, 0.5);
 }
+
+/* END OF CLASSES */
