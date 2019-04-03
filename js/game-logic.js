@@ -1,4 +1,4 @@
-console.log("game-logic.js LOADED");
+console.log("**game-logic.js LOADED**");
 
 const theGame = {
   player1: {
@@ -24,7 +24,7 @@ const theGame = {
   },
 
   checkWinner: function (arr){
-    toWinningString = arr.sort().join().replace(/,/g, "");
+    toWinningString = arr.join().replace(/,/g, "");
     for (let i = 0; i < theGame.winningCombos.length; i++) {
       const candidate = theGame.winningCombos[i];
       let matches = 0;
@@ -42,6 +42,11 @@ const theGame = {
         $('#myModal').modal('show')
         break;
       }
+    }
+    if(theGame.player1Moves.length + theGame.player2Moves.length == 9){
+      $("#draw-message").html("That's A Draw Jedi's, Play Again");
+      $('#myModalDraw').modal('show');
+      console.log("DRAW");
     }
   },
   switchPlayer: function(){

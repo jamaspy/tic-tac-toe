@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  console.log("game-jQuery LOADED");
+  console.log("**game-jQuery LOADED**");
 
   //Set Player 1 Icon
   $("#player1-naught").on("click", function() {
