@@ -33,6 +33,7 @@ $(document).ready(function() {
 
   //Click square function
   $(".square").on("click", function() {
+    $(this).addClass('disableClick');
     theGame.switchPlayer();
     let squareId = $(this).attr("data-squareid");
     $(this).html(theIcon);

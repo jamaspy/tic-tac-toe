@@ -13,17 +13,19 @@ const theGame = {
   player2Moves: [],
   winningCombos: ["123", "456", "789", "147", "258", "369", "159", "357"],
 
-  resetGame: function(){
+  resetGame: function() {
     theGame.player1Moves.length = 0
     theGame.player1.icon = undefined
+    $(".square").removeClass('disableClick');
     $("#player1_icon").html("");
     theGame.player2Moves.length = 0
     theGame.player2.icon = undefined
     $("#player2_icon").html("");
     $(".square").html("");
+
   },
 
-  checkWinner: function (arr){
+  checkWinner: function(arr) {
     toWinningString = arr.join().replace(/,/g, "");
     for (let i = 0; i < theGame.winningCombos.length; i++) {
       const candidate = theGame.winningCombos[i];
@@ -43,13 +45,13 @@ const theGame = {
         break;
       }
     }
-    if(theGame.player1Moves.length + theGame.player2Moves.length == 9){
+    if (theGame.player1Moves.length + theGame.player2Moves.length == 9) {
       $("#draw-message").html("That's A Draw Jedi's, Play Again");
       $('#myModalDraw').modal('show');
       console.log("DRAW");
     }
   },
-  switchPlayer: function(){
+  switchPlayer: function() {
     if (theGame.player1.currentlyPlaying == true) {
       theIcon = theGame.player1.icon;
       theArray = theGame.player1Moves;
