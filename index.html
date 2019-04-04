@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
+  <!-- Bootstrap & Custom CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
 
@@ -35,7 +35,8 @@
     <div class="row mt-2" id="row-1">
 
       <div class="col-md-2 sideBar" id="row-1-sideBar">
-        <span id="displayerWinner"> </span>
+        <p class="lead mt-5">Scoreboard</p>
+        <p class="lead"> P1 <span id="player1Score">0</span> : <span id="player2Score">0</span> P2</p>
       </div>
 
       <div class="col-md-2 square" data-squareid="row-1-square1" data-squarevalue="1" id="row-1-square1"></div>
@@ -77,8 +78,9 @@
       <div class="col-md-2 square" data-squareid="row-3-square2" data-squarevalue="8" id="row-3-square2"></div>
       <div class="col-md-2 square" data-squareid="row-3-square3" data-squarevalue="9" id="row-3-square3"></div>
 
-      <div class="col-md-4 d-flex justify-content-end">
-        <button type="button" class="btn btn-outline-dark btn-sm " onclick="theGame.resetGame();">Reset Game</button>
+      <div class="col-md-4 d-flex align-items-bottom justify-content-end">
+        <button type="button" class="btn btn-outline-dark btn-sm " onclick="theGame.playAgain();">Play <br> Again</button>
+        <button type="button" class="btn btn-outline-dark btn-sm " onclick="theGame.resetGame();">Reset <br> Game</button>
       </div>
     </div>
   </div>
@@ -96,7 +98,7 @@
           <h2><span id="winnerIcon"></span> Is The Winner!</h2>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="theGame.resetGame();">Play Again</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="theGame.playAgain();">Play Again</button>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
@@ -117,7 +119,7 @@
           <h2><span id="draw-message"></span></h2>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="theGame.resetGame();">Play Again</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="theGame.playAgain();">Play Again</button>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>

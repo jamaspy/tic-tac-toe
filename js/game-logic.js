@@ -4,25 +4,50 @@ const theGame = {
   player1: {
     icon: undefined,
     currentlyPlaying: true,
+    score: 0,
   },
+
   player2: {
     icon: undefined,
-    currentlyPlaying: false
+    currentlyPlaying: false,
+    score: 0,
   },
+
+
   player1Moves: [],
   player2Moves: [],
   winningCombos: ["123", "456", "789", "147", "258", "369", "159", "357"],
 
-  resetGame: function() {
-    theGame.player1Moves.length = 0
-    theGame.player1.icon = undefined
+  playAgain: function() {
+    theGame.player1Moves.length = 0;
+    theGame.player1.icon = undefined;
+    theGame.player1.currentlyPlaying = true;
     $(".square").removeClass('disableClick');
     $("#player1_icon").html("");
-    theGame.player2Moves.length = 0
-    theGame.player2.icon = undefined
+
+    theGame.player2Moves.length = 0;
+    theGame.player2.icon = undefined;
+    theGame.player2.currentlyPlaying = false;
     $("#player2_icon").html("");
     $(".square").html("");
+  },
 
+  resetGame: function() {
+    theGame.player1Moves.length = 0;
+    theGame.player1.icon = undefined;
+    theGame.player1.currentlyPlaying = true;
+    theGame.player1.score = 0;
+    $(".square").removeClass('disableClick');
+    $("#player1_icon").html("");
+    $("#player1Score").html("0")
+
+    theGame.player2Moves.length = 0;
+    theGame.player2.icon = undefined;
+    theGame.player2.currentlyPlaying = false;
+    theGame.player2.score = 0;
+    $("#player2_icon").html("");
+    $("#player2Score").html("0");
+    $(".square").html("");
   },
 
   checkWinner: function(arr) {
@@ -38,8 +63,12 @@ const theGame = {
       if (matches === 3) {
         if (theIcon == theGame.player1.icon) {
           $("#winnerIcon").html("Player 1");
+          theGame.player1.score += 1;
+          $("#player1Score").html(theGame.player1.score)
         } else {
           $("#winnerIcon").html("Player 2");
+          theGame.player2.score += 1;
+          $("#player2Score").html(theGame.player2.score)
         };
         $('#myModal').modal('show')
         break;
@@ -48,9 +77,9 @@ const theGame = {
     if (theGame.player1Moves.length + theGame.player2Moves.length == 9) {
       $("#draw-message").html("That's A Draw Jedi's, Play Again");
       $('#myModalDraw').modal('show');
-      console.log("DRAW");
     }
   },
+
   switchPlayer: function() {
     if (theGame.player1.currentlyPlaying == true) {
       theIcon = theGame.player1.icon;
