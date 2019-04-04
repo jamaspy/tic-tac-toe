@@ -4,6 +4,9 @@
 ### Play The Game Here...
 https://jamaspy.github.io/tic-tac-toe/
 
+#### Bonus Game: Rock, Paper, Scissors, Lizard, Spock...
+https://jamaspy.github.io/RockPaperScissors/
+
 ### Technology Used
 * HTML
 * CSS (Bootstrap)
