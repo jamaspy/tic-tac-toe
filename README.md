@@ -1,6 +1,8 @@
 # General Assembly _ Project 0
 ## Tic Tac Toe (Naughts & Crosses) Game.
 
+### Play The Game Here...
+https://jamaspy.github.io/tic-tac-toe/
 
 ### Technology Used
 * HTML
