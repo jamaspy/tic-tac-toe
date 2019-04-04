@@ -11,7 +11,7 @@
 ### Aim Of The Game
 
 The aim of the game is to get three matching icons in a row. Horizontally, veritically or diagonally.
-Users select their icon and then take it in turns placing the icon on the board by clicking in a sqaure. An alert screen will show declaring the winning player & their icon. If, after 9 clicks, there is no winner. A different screen shows decalring a draw and offering a Play Again button. 
+Users select their icon and then take it in turns placing the icon on the board by clicking in a sqaure. An alert screen will show declaring the winning player & their icon. If, after 9 clicks, there is no winner. A different screen shows declaring a draw and offering a 'Play Again' button. 
 
 
 ### Functionality
@@ -20,7 +20,7 @@ Users select their icon and then take it in turns placing the icon on the board 
 
 * A draw is calculated by checking to see if the array.length of each player moves array is equal to 9. If so a draw is shown. 
 
-* The Reset Button, clears Player Moves arrays, Player Icons and all the icons currently on the baord. PLayers must reselect their icons and start the game again.  
+* The Reset Button, clears PlayerMoves arrays, PlayerIcons and all the icons currently on the baord. Players must reselect their icons and start the game again.  
 
 
 ## Blank Game Board
@@ -35,6 +35,7 @@ Users select their icon and then take it in turns placing the icon on the board 
 ![Diagonal Win Example](https://github.com/jamaspy/tic-tac-toe/blob/master/README-Images/draw.png)
 
 ## Things I Would Like To Add
-* An option to increase the baord size (6x6, 9x9)
-* Randon background GIFs shown on the winning and draw modal displays
-* Keeping a tally of the wins so players can play a "Best of X" style game
+* An option to increase the baord size (6x6, 9x9).
+* Ability to select from a slection of playing icons.
+* Randon background GIFs shown on the winning and draw modal displays.
+* Keeping a tally of the wins so players can play a "Best of X" style game.
